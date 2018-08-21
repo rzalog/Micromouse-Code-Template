@@ -1,30 +1,31 @@
 #include "systick.h"
 #include "mbed.h"
-#include "globals.h"
 
 void systickFunction() {
     millis++;
     
-    systick.updateSensors();
-    mainController.update();
+    /**
+     * Need to do something in systick? This is the place!
+     **/
 }
 
 Systick::Systick() {
+    // A little bit of magic: if you want to know why, ask Robert
     NVIC_SetPriority(TIM5_IRQn, 255);
-    m_readEncoders = true;
-    m_readGyro = false;
-    m_readIR = true;
 }
 
 void Systick::start() {
-    m_systicker.attach(&systickFunction, SYS_TICK_TIME);
+    /**
+     * Start systick. Hint: use 'm_ticker', the Ticker variable.
+     **/
 }
 
 void Systick::stop() {
-    m_systicker.detach();
+    // Stop systick
 }
 
 void Systick::wait(float sec) {
+    // Utility function: allows you to wait while using systick.
     int init = millis;
     
     float num_ticks = sec / SYS_TICK_TIME;
@@ -32,30 +33,3 @@ void Systick::wait(float sec) {
     while (millis - init < num_ticks)
         ;
 }
-
-void Systick::setReadEncoders(bool val) {
-    m_readEncoders = val;
-}
-
-void Systick::setReadGyro(bool val) {
-    m_readGyro = val;
-}
-
-void Systick::setReadIR(bool val) {
-    m_readIR = val;
-}
-
-void Systick::updateSensors() {
-    if (m_readEncoders) {
-        encoders.update();
-    }
-    
-    if (m_readGyro) {
-        gyro.update(SYS_TICK_TIME);
-    }
-    
-    if (m_readIR) {
-        ir.update();
-    }
-}
-

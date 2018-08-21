@@ -2,6 +2,7 @@
 
 #include "mbed.h"
 
+// 1ms systick time
 const float SYS_TICK_TIME = .001;
 
 void systickFunction();
@@ -13,18 +14,7 @@ public:
     void start();
     void stop();
     
-    void wait(float sec);
-    
-    void setReadEncoders(bool val);
-    void setReadGyro(bool val);
-    void setReadIR(bool val);
-    
-    void updateSensors();
-    
+    void wait(float sec);    
 private:
     Ticker m_systicker;
-    
-    bool m_readEncoders;
-    bool m_readGyro;
-    bool m_readIR;
 };
