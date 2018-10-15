@@ -16,7 +16,3 @@ void Led::on() {
 void Led::off() {
     m_led = 0;   
 }
-
-void Led::set(int val) {
-    m_led = val;
-}

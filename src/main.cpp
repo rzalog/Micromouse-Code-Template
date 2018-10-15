@@ -5,7 +5,11 @@
 #include "pins.h"
 
 int main() {
-    pc.printf("\n---\nThe program has started.\n---\n");
+    /***
+     * Run a function from "run_modes" here.
+     * You can also put some indicator to show that your mouse has booted,
+     * such as a print statement or an LED blink.
+     ***/
 
     blinky_led();
 }

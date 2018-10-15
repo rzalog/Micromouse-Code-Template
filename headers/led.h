@@ -8,7 +8,6 @@ public:
     void toggle();
     void on();
     void off();
-    void set(int val);
 private:
-    DigitalOut m_led;   
+    DigitalOut m_led;
 };

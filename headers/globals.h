@@ -2,7 +2,6 @@
 
 #include "mbed.h"
 #include "led.h"
-#include "beep.h"
 #include "motors.h"
 #include "sensors.h"
 #include "systick.h"

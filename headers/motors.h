@@ -16,6 +16,11 @@ public:
     Motors();
     void startBaseSpeed();
     void stop();
+
+    /***
+     * Range from 0.0-100.0.
+     ***/
+
     void setLeftPwm(float pwm);
     void setRightPwm(float pwm);
     void incrementPwm(float pwm);

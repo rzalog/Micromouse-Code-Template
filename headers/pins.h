@@ -1,7 +1,7 @@
 #pragma once
 
 // LEDs
-#define LED 0
+#define LED LED1
 
 // Misc
 #define SWCLK   0
