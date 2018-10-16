@@ -1,51 +1,8 @@
-#include "run_modes.h"
-#include "sensors.h"
-#include "globals.h"
-#include "main_controller.h"
-#include "move_controller.h"
-#include "modes.h"
-#include "pins.h"
-
-#include "logging.h"
-
-void blinky_led() {
-    while (true) {
-        /***
-         * Assignment 1
-         * Ensure that you are using the correct pin for the LED,
-         * and then toggle the LED back and forth.
-         ***/
-
-        led.toggle();
-        wait(0.5);
-    }
-}
-
-void hello_world() {
-    /***
-     * Assignment 1
-     * Find and assign the correct TX, RX pins in "pins.h" to use 
-     * the serial PC. Get the output to show up on your computer.
-     ***/
-
-    while (true) {
-        int counter = 1;
-        logger.logf("Hello, World %d!", counter);
-        logger.print_recent();
-        counter++;
-        wait(1);
-    }
-}
-
 /***
  * Assignment 2
  * 
  * The first function you fill in, to make your motors do the steps
  * detailed in the check-off list.
- * 
- * The second function is done for you, but you will need to make
- * the encoders actually work and read the correct values, and verify
- * with the steps detailed in the check-off list.
  ***/
 void basic_motor_movement() {
     // TODO: Move forwards
@@ -59,6 +16,11 @@ void basic_motor_movement() {
     // TODO: Turn
 }
 
+/***
+ * The second function is done for you, but you will need to make
+ * the encoders actually work and read the correct values, and verify
+ * with the steps detailed in the check-off list.
+ ***/
 void read_encoders() {
     while (true) {
         encoders.printValues();

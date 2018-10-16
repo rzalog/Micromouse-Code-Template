@@ -1,8 +1,4 @@
-#include "beep.h"
-
-#include "run_modes.h"
-#include "globals.h"
-#include "pins.h"
+#include "assignment1.h"
 
 int main() {
     /***
