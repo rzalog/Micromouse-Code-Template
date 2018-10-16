@@ -4,5 +4,5 @@
 #define LED LED1
 
 // Serial I/O
-#define RX      0
-#define TX      0
+#define TX      SERIAL_TX
+#define RX      SERIAL_RX

@@ -17,9 +17,9 @@ void blinky_led() {
  * the serial PC. Get the output to show up on your computer.
  ***/
 void hello_world() {
+    int counter = 1;
     while (true) {
-        int counter = 1;
-        pc.printf("Hello, World %d!", counter);
+        pc.printf("Hello, World %d!\n", counter);
         counter++;
         wait(1);
     }
