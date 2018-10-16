@@ -3,7 +3,6 @@
 #include "sensors.h"
 #include "globals.h"
 
-
 float KpX = 1;
 float KdX = 1;
 

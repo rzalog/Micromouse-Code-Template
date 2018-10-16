@@ -1,12 +1,21 @@
 #pragma once
 
-const float LEFT_SPEED_FACTOR = 0.97;
-
 const float PWM_SCALE = 100.0f;
 
-const float MIN_SPEED = .085f * PWM_SCALE;
-const float MAX_SPEED = 0.375f * PWM_SCALE;
-const float BASE_SPEED = 0.12f * PWM_SCALE;
+/***
+ * Assignment 2
+ * 
+ * Find good values for these parameters.
+ * 
+ * It is better to have lower MIN_SPEED and MAX_SPEED.
+ * However, this may cause your motors to stall or draw
+ * too much current, so you have to tune them yourself.
+ * 
+ * Hint: 0.0 is much too small, 1.0 is much too big!
+ ***/
+
+const float MIN_SPEED = 0.0f * PWM_SCALE;
+const float MAX_SPEED = 1.0f * PWM_SCALE;
 
 const int RIGHT_MOTOR = 0;
 const int LEFT_MOTOR = 1;
@@ -23,7 +32,6 @@ public:
 
     void setLeftPwm(float pwm);
     void setRightPwm(float pwm);
-    void incrementPwm(float pwm);
 private:
     void setMotorPwm(int motor, float pwm);
     

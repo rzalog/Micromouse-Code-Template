@@ -8,9 +8,14 @@ MainController::MainController() {
 }
 
 MainController::~MainController() {
-    delete m_pid;   
+    delete m_pid;
 }
 
+/***
+ * Assignment 3
+ * 
+ * Implement PID! Most of this work is done in "pid_controller".
+ ***/
 void MainController::update() {
     /****
      * Every systick, what do you want to do?
@@ -18,13 +23,23 @@ void MainController::update() {
      *****/
 }
 
+/***
+ * Assignment 3: Part 1
+ * 
+ * Get your mouse driving straight.
+ ***/
 void MainController::driveStraight() {
     /**
-     * Set goals! This is discussed in the lecture slides.
+     * Set an X goal and W goal correctly! This is discussed in the lecture slides.
      * For help, see example code: pid/drive-straight.cpp
      **/
 }
 
+/***
+ * Assignment 3: Part 2
+ * 
+ * Get your mouse to turn, and drive a specific distance.
+ ***/
 void MainController::turn(int deg) {
     /**
      * For help, see example code: pid/turning.cpp

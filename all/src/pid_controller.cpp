@@ -5,6 +5,12 @@ PIDController::PIDController() {
     this->reset();
 }
 
+/***
+ * Assignment 3
+ * 
+ * Implement PID!
+ ***/
+
 void PIDController::reset() volatile {    
     /**
      * You'll have a lot to keep track of. Make sure to reset all 
