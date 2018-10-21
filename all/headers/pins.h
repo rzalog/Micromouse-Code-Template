@@ -3,19 +3,15 @@
 // LEDs
 #define LED LED1
 
-// Misc
-#define SWCLK   0
-#define SWDIO   0
-
 // Serial I/O
-#define RX      0
-#define TX      0
+#define RX      SERIAL_RX
+#define TX      SERIAL_TX
 
 // Motors (R/L = right/left, F/B = forward/backwards)
-#define MOTOR_LB    0
-#define MOTOR_LF    0
-#define MOTOR_RB    0
-#define MOTOR_RF    0
+#define MOTOR_RF    PB_10
+#define MOTOR_RB    PC_7
+#define MOTOR_LF    PB_6
+#define MOTOR_LB    PA_7
 
 // Encoders (left/right, A/B channels)
 #define ENC_LA      0

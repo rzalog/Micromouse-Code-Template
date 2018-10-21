@@ -1,6 +1,8 @@
 /***
  * Assignment 2
- * 
+ ***/
+
+/***
  * The first function you fill in, to make your motors do the steps
  * detailed in the check-off list.
  ***/
