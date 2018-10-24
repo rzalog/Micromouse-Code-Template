@@ -23,9 +23,6 @@ void Motors::setMotorPwm(int motor, float pwm) {
         else if (pwm < 0) pwm = -MIN_SPEED;
     }
     
-    //  Turn 0-100 scale to 0.0-1.0 scale
-    pwm /= PWM_SCALE;
-    
     // Use the "PwmOut" objects defined above
     // Hint: Stop your backwards/forward motor before going forward/backwards.
     if (pwm > 0) {

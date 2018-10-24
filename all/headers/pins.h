@@ -8,16 +8,16 @@
 #define TX      SERIAL_TX
 
 // Motors (R/L = right/left, F/B = forward/backwards)
-#define MOTOR_RF    PB_10
-#define MOTOR_RB    PC_7
-#define MOTOR_LF    PB_6
-#define MOTOR_LB    PA_7
+#define MOTOR_RF    0
+#define MOTOR_RB    0
+#define MOTOR_LF    0
+#define MOTOR_LB    0
 
 // Encoders (left/right, A/B channels)
-#define ENC_LA      0
-#define ENC_LB      0
-#define ENC_RA      0
-#define ENC_RB      0
+#define ENC_LF      PA_1
+#define ENC_LB      PA_2
+#define ENC_RF      PB_3
+#define ENC_RB      PA_15
 
 // IR emitters
 #define IR_Rfront   0
