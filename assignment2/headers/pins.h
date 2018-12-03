@@ -8,10 +8,10 @@
 #define RX      SERIAL_RX
 
 // Encoders (left/right, A/B channels)
-#define ENC_LF      PA_1
-#define ENC_LB      PA_2
 #define ENC_RF      PB_3
 #define ENC_RB      PA_15
+#define ENC_LF      PA_1
+#define ENC_LB      PC_4
 
 // Motors (R/L = right/left, F/B = forward/backwards)
 #define MOTOR_RF    0

@@ -1,9 +1,17 @@
 // Start here. All this can be run in systick!
 // This will just keep going straight forever.
 
+void update() {
+	get_sensor_feedback();
+	x_controller();
+	w_controller();
+	update_motor_pwm();
+}
+
 void get_sensor_feedback() {
 	angle_travelled = encoders.left() - encoders.right();
 }
+
 float x_controller() {
 	return 0;
 }
@@ -13,23 +21,23 @@ float w_controller() {
 	pwm_w = KpW * w_error + KdW * (w_error - w_error_old) * dt;
 
 	w_error_old = w_error;
-
-	return pwm_w;
 }
 
 void update_motor_pwm() {
 	pwm_x = x_controller();
 	pwm_w = w_controller();
 
-	adjust_pwms(&pwm_x, &pwm_w);
+	right = pwm_x + pwm_w;
+	left = pwm_x - pwm_w;
 
-	if (too_slow(pwm_x, pwm_w)) {
-		if (has_been_going_slow_for_too_long()) {
-			finish_pid();
-		}
+	if (right < min_speed && left < min_speed) {
+		counter++;
 	}
-	else {
-		motors.set_right_pwm(pwm_x + pwm_w);
-		motors.set_left_pwm(pwm_x - pwm_w);
-	}
+
+	motors.set_right_pwm(right);
+	motors.set_left_pwm(left);
+}
+
+bool is_done() {
+	return counter > threshold;
 }

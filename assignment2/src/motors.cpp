@@ -2,10 +2,10 @@
 #include "mbed.h"
 #include "pins.h"
 
-PwmOut m_RF(MOTOR_RF);
-PwmOut m_RB(MOTOR_RB);
-PwmOut m_LF(MOTOR_LF);
-PwmOut m_LB(MOTOR_LB);
+// PwmOut m_RF(MOTOR_RF);
+// PwmOut m_RB(MOTOR_RB);
+// PwmOut m_LF(MOTOR_LF);
+// PwmOut m_LB(MOTOR_LB);
 
 /***
  * Assignment 2

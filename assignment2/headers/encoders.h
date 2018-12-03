@@ -11,12 +11,8 @@ class Encoder {
 public:
     Encoder();
     void reset() volatile;
-    void update() volatile;
     int getPulsesR() volatile;
     int getPulsesL() volatile;
     
     void printValues() volatile;
-private:    
-    volatile int m_countR;
-    volatile int m_countL;
 };

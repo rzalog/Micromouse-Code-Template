@@ -2,6 +2,7 @@
 #include "pins.h"
 #include "globals.h"
 #include "mbed.h"
+#include "QEI.h"
 
 /***
  * Assignment 2
