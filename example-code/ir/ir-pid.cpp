@@ -26,7 +26,8 @@ float get_ir_error() {
 
 void w_controller() {
     // once again, make sure these signs match up!
-    float w_error = m_countsW + get_ir_error();
+    // You may have to scale IR error to work better with encoder error
+    float w_error = m_countsW + get_ir_error() * IR_SCALING;
 
     /* ... the rest of the W controller code ... */
 }
