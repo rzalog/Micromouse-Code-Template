@@ -1,0 +1,26 @@
+if there is a neighbor with lower distance to the center,
+    move to that neighbor
+
+// otherwise, must run floodfill
+initialize new stack
+push current location onto stack
+
+while stack is not empty:
+    cur = stack.pop()
+
+    // Do not process end goal
+    // cur.distance is distance from "cur" cell to center of maze
+    if cur.distance == 0, continue
+
+    min_dist = inf // or any big number
+    for each neighboring cell of cur,
+        if there is no wall between cur and neighbor,
+            min_dist = neighbor.distance
+    
+    // Means that "cur" has a smaller distance cell it can move to,
+    // so no need to do anything else
+    if cur.distance > min_dist,
+        continue
+    
+    cur.distance = min_dist + 1
+    push every neighbor onto the stack
